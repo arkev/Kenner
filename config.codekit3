@@ -2606,6 +2606,26 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/images\/bkg-header.jpg": {
+		"ft": 16384,
+		"iS": 139293,
+		"oA": 0,
+		"oAP": "\/images\/bkg-header.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/images\/bkg-servicios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/bkg-servicios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/images\/facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2675,6 +2695,16 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/JS\/programacion.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/JS\/min\/programacion-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		}
 	},
 "hooks": [

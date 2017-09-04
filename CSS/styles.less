@@ -1,11 +1,194 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
-
-body{
+@import "variab";
+@import "mixins";
+//variables
+@azul: #163f67;
+@grisClaro: #53555f;
+@grisMedio: #353944;
+@grisObscuro: #2a2a31;
+@NoBase: 15.6;
+@factor: 21;
+@light: 300;
+@regular: 400;
+@bold: 700;
+@black: 800;
+@tablet: ~"only screen and (min-width: 48em)";
+@laptop: ~"only screen and (min-width: 62em)";
+//(16*39)/21
+//Mixins
+.Open(@weight: @regular,
+@color: @grisObscuro) {
 	font-family: 'Open Sans', sans-serif;
+	font-weight: @weight;
+	color: @grisObscuro;
 }
-header, #cta2, #beneficios{
+
+.centrarBloque() {
 	width: 90%;
 	max-width: 1440px;
 	margin: 0 auto;
 	display: block;
+}
+
+.button() {
+	.font-size(11);
+	font-weight: @light;
+	color: white;
+	padding: 12px 4rem;
+	background: @azul;
+	text-align: center;
+	border: 0;
+	margin: 0 auto;
+	border-radius: 25px;
+	display: table;
+	box-shadow: 0px 15px 30px 0px rgba(22, 63, 103, .8);
+	.transition();
+	&:hover {
+		background-color: lighten(@azul, 10%);
+	}
+	&:active {
+		background-color: darken(@azul, 10%);
+	}
+}
+
+html {
+	.Open();
+	font-size: 16px;
+}
+
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+header {
+	background: url(/images/bkg-header.jpg) no-repeat fixed;
+	background-size: cover;
+	padding-bottom: 3em;
+	@media @tablet {
+		background-position-x: 45%;
+	}
+	div {
+		.centrarBloque();
+	}
+}
+
+#principal {
+	padding-top: 2em;
+	h1 {
+		.font-size(16);
+		@media @tablet {
+			.font-size((@NoBase*27.5)/@factor);
+		}
+		@media @laptop {
+			.font-size((@NoBase*39)/@factor);
+		}
+	}
+	h2 {
+		.font-size(14);
+		color: @grisMedio;
+		margin-bottom: 0;
+		margin-top: 1.6em
+	}
+	p {
+		.font-size(12);
+		color: @grisClaro;
+		margin-top: 5px;
+	}
+}
+
+form {
+	background: rgba(0, 0, 0, .85);
+	border-radius: 20px;
+	padding: 25px;
+	margin: 45px auto 0;
+	max-width: 420px;
+	@media @tablet {
+		width: 100%;
+	}
+	input,
+	select {
+		width: (100%-15px);
+		border: 0;
+		background: @grisMedio;
+		border-radius: 20px;
+		color: white;
+		padding: 10px 20px;
+		margin-bottom: 25px;
+		font-weight: @light;
+		.font-size(11);
+		&:focus {
+			outline: none;
+			border-radius: 20px;
+			border: 2px solid gray;
+			padding: 8px 18px;
+		}
+		@media @tablet {
+			width: (100%-10px);
+		}
+	}
+	select {
+		text-indent: 10px;
+		width: 95%;
+		height: 40px;
+		@media @tablet {
+			width: 100%;
+		}
+	}
+	button {
+		.button();
+	}
+}
+
+#servicios {
+	background: @azul url(/images/bkg-servicios.svg) no-repeat -175px 235px;
+	color: white;
+	padding: 50px 0;
+	@media @tablet {
+		background-position: -210px 0px;
+	}
+	@media @laptop {
+		background-position: -105px -30px;
+	}
+	@media @desktop {
+		background-position: -55px -40px;
+	}
+	@media @bigScreen {
+		background-position: left center;
+	}
+	h2 {
+		.font-size(21);
+		@media @tablet {
+			.font-size((@NoBase*34.5)/@factor);
+		}
+		@media @laptop {
+			.font-size((@NoBase*48)/@factor);
+		}
+	}
+	ul {
+		line-height: 1.2em;
+		li {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+#logo_parallax {
+	background: url(/images/patron-80s.svg) fixed;
+	height: 350px;
+	overflow: hidden;
+	position: relative;
+	img {
+		mix-blend-mode: multiply;
+		position: absolute;
+		left: -13%;
+		top: 10px;
+		@media @tablet {
+			position: static;
+		}
+		@media @laptop {
+			position: absolute;
+			left: 15%;
+		}
+	}
 }

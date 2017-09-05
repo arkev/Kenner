@@ -27,7 +27,6 @@
 	width: 90%;
 	max-width: 1440px;
 	margin: 0 auto;
-	display: block;
 }
 
 .button() {
@@ -57,8 +56,12 @@ html {
 }
 
 .row {
-	margin-right: 0;
-	margin-left: 0;
+	margin-right: 0px;
+	margin-left: 0px;
+	@media @tablet {
+		margin-right: 5px;
+		margin-left: 5px;
+	}
 }
 
 header {
@@ -141,11 +144,12 @@ form {
 }
 
 #servicios {
-	background: @azul url(/images/bkg-servicios.svg) no-repeat -175px 235px;
+	background: @azul url(/images/bkg-servicios.svg) no-repeat -175px 325px;
 	color: white;
-	padding: 50px 0;
+	padding: 50px 0 300px;
 	@media @tablet {
 		background-position: -210px 0px;
+		padding: 50px 0;
 	}
 	@media @laptop {
 		background-position: -105px -30px;
@@ -176,19 +180,111 @@ form {
 #logo_parallax {
 	background: url(/images/patron-80s.svg) fixed;
 	height: 350px;
-	overflow: hidden;
-	position: relative;
-	img {
-		mix-blend-mode: multiply;
-		position: absolute;
-		left: -13%;
-		top: 10px;
+}
+
+#nosotros {
+	background: url(/images/bkg-nosotros.svg);
+	color: white;
+	#sobreNosotros {
+		padding: 20px;
 		@media @tablet {
-			position: static;
+			padding: 40px;
 		}
 		@media @laptop {
-			position: absolute;
-			left: 15%;
+			padding: 60px;
+		}
+		h2 {
+			.font-size(21);
+			@media @tablet {
+				.font-size((@NoBase*34.5)/@factor);
+			}
+			@media @laptop {
+				.font-size((@NoBase*48)/@factor);
+			}
+		}
+		p {
+			.font-size(10);
+			line-height: 1.5em;
+			@media @tablet {
+				.font-size((@NoBase*12.7)/@factor);
+			}
+			@media @laptop {
+				.font-size((@NoBase*15.4)/@factor);
+			}
+			@media @desktop {
+				.font-size((@NoBase*18.1)/@factor);
+			}
+			@media @bigScreen {
+				.font-size((@NoBase*21)/@factor);
+			}
 		}
 	}
+	#kennerPapper {
+		padding: 0;
+		overflow: hidden;
+		margin-bottom: -2px;
+		img {
+			height: 44vh;
+			object-fit: cover;
+			@media @tablet {
+				height: 54vh;
+			}
+			@media @laptop {
+				height: 54vh;
+			}
+		}
+	}
+}
+
+#beneficios {
+	padding-bottom: 40px;
+	article {
+		.centrarBloque();
+		#benTitulos {
+			h2 {
+				.font-size(17);
+				margin-bottom: .8rem;
+				@media @tablet {
+					.font-size((@NoBase*30)/@factor);
+				}
+				@media @laptop {
+					.font-size(29);
+				}
+			}
+			h3 {
+				margin-top: 0;
+				.font-size(14);
+				font-weight: @light;
+				margin-bottom: 55px;
+				@media @tablet {
+					.font-size((@NoBase*24)/@factor);
+				}
+				@media @laptop {
+					.font-size(23);
+				}
+			}
+		}
+	}
+}
+
+#cta2{
+	background: @grisObscuro;
+	padding: 50px 0;
+	color: white;
+	article{
+		.centrarBloque();
+	}
+	h2{
+		font-weight: @light;
+		.font-size((@NoBase*22)/@factor);
+	}
+	button{
+		.button();
+		padding: 12px 1.9rem;
+	}
+	
+}
+
+footer{
+	padding: 10px 0;
 }

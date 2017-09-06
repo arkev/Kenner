@@ -18,7 +18,7 @@ $(".twitter").on('click', function () {
 
 //Ir a Facebook
 $(".facebook").on('click', function () {
-	window.location = "https://facebook.com/";
+	window.location = "https://www.facebook.com/Kenner-Accounting-Tax-and-Services-1545385835576829/";
 });
 
 //Ir a Whatsapp

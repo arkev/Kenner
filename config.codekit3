@@ -2716,14 +2716,40 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/JS\/programacion.js": {
+	"\/images\/whatsapp.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/whatsapp.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/JS\/min\/programacion-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/JS\/min\/programacion-min.js",
+		"oAP": "\/JS\/min\/min\/programacion-min-min.js",
 		"oF": 0,
 		"sC": 1,
+		"tS": 0
+		},
+	"\/JS\/min\/programacion-min.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/JS\/min\/programacion-min.js.map",
+		"oF": 0
+		},
+	"\/JS\/programacion.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/JS\/min\/programacion-min.js",
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		}
 	},

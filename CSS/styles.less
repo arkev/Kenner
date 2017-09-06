@@ -50,8 +50,10 @@
 	}
 }
 
-.esconder(){
-	display: none; height: 0px; width: 0px;
+.esconder() {
+	display: none;
+	height: 0px;
+	width: 0px;
 }
 
 html {
@@ -271,27 +273,54 @@ form {
 	}
 }
 
-#cta2{
+#cta2 {
 	background: @grisObscuro;
 	padding: 50px 0;
 	color: white;
-	article{
+	article {
 		.centrarBloque();
 	}
-	h2{
+	h2 {
 		font-weight: @light;
 		.font-size((@NoBase*22)/@factor);
 	}
-	button{
+	button {
 		.button();
 		padding: 12px 1.9rem;
 	}
-	
 }
 
-footer{
+footer {
+	
+	article {
+		.centrarBloque();
+	}
 	padding: 10px 0;
-	.facebook, .twitter, .whatsapp{
+	.facebook,
+	.twitter,
+	.whatsapp {
 		cursor: pointer;
+	}
+	a {
+		color: @azul;
+		font-weight: @bold;
+		&:hover {
+			color: lighten(@azul, 10%);
+		}
+		&:active {
+			color: darken(@azul, 10%);
+		}
+	}
+}
+
+.gracias {
+	header {
+		height: 100vh;
+	}
+	footer{
+		background:white;
+		position: sticky;
+		left: 0;
+		bottom: 0;
 	}
 }

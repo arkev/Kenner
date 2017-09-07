@@ -115,6 +115,11 @@ form {
 	@media @tablet {
 		width: 100%;
 	}
+	p {
+		color: white;
+		font-weight: @light;
+		margin-bottom: 2rem;
+	}
 	input,
 	select {
 		width: (100%-15px);
@@ -284,14 +289,14 @@ form {
 		font-weight: @light;
 		.font-size((@NoBase*22)/@factor);
 	}
-	button {
+	a {
 		.button();
+		text-decoration: none;
 		padding: 12px 1.9rem;
 	}
 }
 
 footer {
-	
 	article {
 		.centrarBloque();
 	}
@@ -316,11 +321,22 @@ footer {
 .gracias {
 	header {
 		height: 100vh;
+		div {
+			margin: 0 auto 3rem;
+		}
 	}
-	footer{
-		background:white;
-		position: sticky;
-		left: 0;
-		bottom: 0;
+	footer {
+		background: white;
+		@media @tablet {
+			position: sticky;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	a.button {
+		.button();
+		text-decoration: none;
+		display: inline-block;
+		margin-top: 3rem;
 	}
 }

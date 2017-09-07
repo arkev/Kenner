@@ -51,7 +51,7 @@
 				</section>
 				<section class="col-xs-12 col-sm-offset-1 col-sm-5">
 					<form class="form-view theme2" id="agile-form" action="https://kenner.agilecrm.com/formsubmit" style="max-width:450px;" method="GET">
-					<p>Regístrate hoy mismo y obtén tu primera <strong>asesoría gratis.</strong></p>
+						<p>Regístrate hoy mismo y obtén tu primera <strong>asesoría gratis.</strong></p>
 						<div class="esconder">
 							<input type="hidden" id="_agile_form_name" name="_agile_form_name" value="Kenner Landing">
 							<input type="hidden" id="_agile_domain" name="_agile_domain" value="kenner">
@@ -178,8 +178,23 @@
 			</section>
 		</article>
 	</footer>
+	<!-- jQuery -->
 	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- WOW -->
 	<script src="/bower_components/wow/dist/wow.min.js"></script>
+	<!-- Programación -->
 	<script src="/JS/min/programacion-min.js"></script>
+	<!-- Analítica de Agile -->
+	<script id="_agile_min_js" async type="text/javascript" src="https://kenner.agilecrm.com/stats/min/agile-min.js">
+	</script>
+	<script type="text/javascript">
+		var Agile_API = Agile_API || {};
+		Agile_API.on_after_load = function() {
+			_agile.set_account('rehj0h75gc5eju2e48tac512rs', 'kenner');
+			_agile.track_page_view();
+			_agile_execute_web_rules();
+		};
+	</script>
 </body>
+
 </html>

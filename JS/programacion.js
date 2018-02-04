@@ -53,7 +53,7 @@ $(".facebook").on('click', function () {
 
 //Ir a Whatsapp
 $(".whatsapp").on('click', function () {
-	window.location = "https://api.whatsapp.com/send?phone=5218126681066";
+	window.location = "https://api.whatsapp.com/send?phone=5218114894056";
 });
 
 //Formulario de Agile
